@@ -15,8 +15,9 @@ function ProductSection() {
     })
   }
   return (
-    <div className='px-10 md:px-20'>
-      <ProductList productList={productList}/>
+    <div className='px-5 md:px-10 mb-4'>
+      <h2 className='text-2xl my-5 font-bold border rounded-sm p-4 w-fit hover:border-primary cursor-pointer hover:rounded-lg transition hover:text-primaryHover'>Our Latest Product</h2>
+      <ProductList productList={productList} className=''/>
     </div>
   )
 }
