@@ -1,7 +1,12 @@
+'use client'
 import React from "react";
 import Image from "next/image";
+import { useUser } from '@clerk/nextjs'
+
 function Footer() {
-  return (
+  const { user } = useUser();
+
+  return user && (
     <footer className="bg-gray-100">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex justify-center text-primary items-center gap-4">
@@ -19,8 +24,8 @@ function Footer() {
               className="text-gray-700 transition hover:text-primaryHover"
               href="/"
             >
-              {" "}
-              Home{" "}
+              
+              Home
             </a>
           </li>
 
@@ -29,8 +34,8 @@ function Footer() {
               className="text-gray-700 transition hover:text-primaryHover"
               href="#"
             >
-              {" "}
-              Explore{" "}
+              
+              Explore
             </a>
           </li>
 
@@ -39,8 +44,8 @@ function Footer() {
               className="text-gray-700 transition hover:text-primaryHover"
               href="#"
             >
-              {" "}
-              Projects{" "}
+              
+              Projects
             </a>
           </li>
 
@@ -49,8 +54,8 @@ function Footer() {
               className="text-gray-700 transition hover:text-primaryHover"
               href="#"
             >
-              {" "}
-              About Us{" "}
+              
+              About Us
             </a>
           </li>
 
@@ -59,8 +64,8 @@ function Footer() {
               className="text-gray-700 transition hover:text-primaryHover"
               href="#"
             >
-              {" "}
-              Contact Us{" "}
+              
+              Contact Us
             </a>
           </li>
         </ul>
