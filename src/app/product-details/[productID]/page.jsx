@@ -1,6 +1,6 @@
 "use client";
-import BreadCumbs from "@/components/BreadCumbs";
-import productsAPIs from "@/utils/productsAPIs";
+import BreadCumbs from "../../../components/BreadCumbs";
+import productsAPIs from "../../../utils/productsAPIs";
 import React, { useEffect, useState } from "react";
 import ProductBanner from "./_components/ProductBanner";
 import ProductInfo from "./_components/ProductInfo";

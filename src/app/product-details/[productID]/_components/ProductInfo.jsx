@@ -5,8 +5,9 @@ import { LuBadgeCheck, LuBadgeX } from "react-icons/lu";
 import Sekelton from "./Sekelton";
 import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
-import cartAPIs from "@/utils/cartAPIs";
-import { CartContext } from "@/context/CartContext";
+import cartAPIs from "../../../../utils/cartAPIs";
+import { CartContext } from "../../../../context/CartContext";
+
 
 function ProductInfo({ product }) {
   const { user } = useUser();

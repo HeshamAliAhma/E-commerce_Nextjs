@@ -1,11 +1,12 @@
 "use client";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { ClerkProvider } from "@clerk/nextjs";
-import { CartContext } from "@/context/CartContext";
+// import { CartContext } from "@/context/CartContext";
+import {CartContext } from '../context/CartContext';
 import { useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 
 const inter = Inter({ subsets: ["latin"] });

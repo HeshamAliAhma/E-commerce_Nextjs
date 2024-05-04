@@ -1,7 +1,8 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import ProductList from './ProductList'
-import productsAPIs from '@/utils/productsAPIs';
+// import productsAPIs from '../../utils/productsAPIs';
+import productsAPIs from '../utils/productsAPIs'
 
 
 function ProductSection() {

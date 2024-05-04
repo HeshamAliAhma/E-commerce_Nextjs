@@ -5,8 +5,12 @@ import { useUser, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CiShoppingCart } from "react-icons/ci";
-import { CartContext } from "@/context/CartContext";
-import CartAPIs from "@/utils/cartAPIs";
+import { CartContext } from "../context/CartContext";
+import CartAPIs from "../utils/cartAPIs";
+import Cart from "./Cart";
+
+
+
 const Links = [
   { path: "/", title: "Home" },
   { path: "/Explore", title: "Explore" },
@@ -17,6 +21,7 @@ const Links = [
 
 function Header() {
   const [Loggedin,setLoggedin] = useState();
+  const [open,setOpen] = useState(false);
   useEffect(() => {
     setLoggedin(window.location.href.toString().includes('sign-in'))
   },[])
@@ -82,16 +87,17 @@ useEffect(() => {
                   </Link>
                 </div>
               ) : (
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4" onClick={() => setOpen(!open)}>
                   <h2 className="cursor-pointer flex items-center">
-                  <CiShoppingCart className="text-3xl" />
+                  <CiShoppingCart className="text-3xl"   />
                   (
                     <span className="text-primary font-bold">
                     {cart?.length}
                     </span>
                     )
                   </h2>
-                  <UserButton />
+                  <UserButton afterSignOutUrl="/"/>
+                  {open && <Cart/>}
                 </div>
               )}
 
